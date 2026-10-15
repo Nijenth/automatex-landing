@@ -15,7 +15,7 @@ async function handleSubmit(
 ) {
   event.preventDefault();
 
-  if (isSending) return;
+  if (isSending || submitted) return;
 
   if (!name.trim() || !email.trim() || !message.trim()) {
     setError("Please fill in all fields.");
@@ -47,9 +47,6 @@ async function handleSubmit(
     }
 
     setSubmitted(true);
-    setName("");
-    setEmail("");
-    setMessage("");
   } catch {
     setError("Unable to send your message. Please try again.");
   } finally {
@@ -116,8 +113,12 @@ async function handleSubmit(
           rows={5}
         />
 
-<button type="submit" disabled={isSending}>
-  {isSending ? "Sending..." : "Send Message"}
+<button type="submit" disabled={isSending || submitted}>
+  {isSending
+    ? "Sending..."
+    : submitted
+      ? "Message Sent"
+      : "Send Message"}
 </button>
 
 {submitted && (
