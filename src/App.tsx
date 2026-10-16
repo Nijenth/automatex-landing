@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Services from "./Services";
 import About from "./About"
 import Contact from "./Contact";
+import DashboardPreview from "./DashboardPreview";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
       <main>
         <Hero />
+        <DashboardPreview/>
         <Services />
         <About />
         <Contact />
