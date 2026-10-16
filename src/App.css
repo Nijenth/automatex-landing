@@ -10,11 +10,21 @@
 }
 
 .logo {
-  color: #b49bff;
+  color: #f8fafc;
   font-size: 25px;
   font-weight: 800;
   letter-spacing: -0.8px;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-symbol {
+  color: #a78bfa;
+  font-size: 30px;
+  line-height: 1;
+  text-shadow: 0 0 18px rgba(167, 139, 250, 0.45);
 }
 
 .nav-links {
@@ -50,8 +60,19 @@
 .hero {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 80px 6%;
   text-align: center;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 90px 6% 76px;
+
+  background: radial-gradient(
+    ellipse 48% 60% at 50% 30%,
+    rgba(124, 58, 237, 0.24) 0%,
+    rgba(124, 58, 237, 0.10) 45%,
+    transparent 100%
+  );
 }
 
 .hero-label {
@@ -62,9 +83,11 @@
 }
 
 .hero h1 {
-  font-size: clamp(38px, 5.2vw, 64px);
-  line-height: 1.15;
-  margin: 20px 0;
+  font-size: clamp(38px, 5.2vw, 56px);
+  font-weight: 800;
+  line-height: 1.10;
+  letter-spacing: -0.035em;
+  margin: 28px 0 24px;
 }
 
 .hero h1 span {
@@ -317,22 +340,6 @@
    Navbar and Hero
 ======================================== */
 
-/* Atmospheric hero */
-.hero {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  padding: 90px 6% 76px;
-
-  background:
-  radial-gradient(
-    ellipse 48% 60% at 50% 30%,
-    rgba(124, 58, 237, 0.24) 0%,
-    rgba(124, 58, 237, 0.10) 45%,
-    transparent 100%
-  );
-}
-
 /* Label above the headline */
 .hero-label {
   display: inline-block;
@@ -343,15 +350,6 @@
   color: #c4b5fd;
   letter-spacing: 1.8px;
   font-size: 11px;
-}
-
-/* Stronger headline typography */
-.hero h1 {
-  font-size: clamp(38px, 5.2vw, 56px);
-  font-weight: 800;
-  line-height: 1.10;
-  letter-spacing: -0.035em;
-  margin: 28px 0 24px;
 }
 
 /* Violet gradient headline */
