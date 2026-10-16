@@ -29,7 +29,7 @@ function Services() {
         <ServiceCard
           icon="📊"
           title="AI Analytics"
-          description="Automate customer conversations."
+          description="Turn business data into actionable insights with AI-powered analytics."
         />
       </div>
     </section>

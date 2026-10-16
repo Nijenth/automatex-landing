@@ -9,7 +9,7 @@ function Hero() {
         <h1>
           Automate Your Work.
           <br />
-          <span> Focus on Business growth.</span>
+          <span> Focus on Business Growth.</span>
         </h1>
   
         <p className="hero-description">
